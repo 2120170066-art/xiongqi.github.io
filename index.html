@@ -15,17 +15,7 @@
   <!-- Navigation -->
   <nav class="nav">
     <div class="nav-inner">
-      <a href="index.html" class="nav-logo">M.<span>Z</span></a>
-      <ul class="nav-links">
-        <li><a href="index.html">首页</a></li>
-        <li><a href="articles.html">文章</a></li>
-        <li><a href="about.html">关于</a></li>
-      </ul>
-      <button class="nav-toggle" aria-label="切换导航菜单">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+      <a href="index.html" class="nav-logo">X.<span>Q</span></a>
     </div>
   </nav>
 
@@ -45,46 +35,120 @@
             <p class="hero-title fade-in fade-in-delay-2" id="hero-title"></p>
             <p class="hero-affiliation fade-in fade-in-delay-2" id="hero-affiliation"></p>
             <div class="hero-interests fade-in fade-in-delay-3" id="hero-interests"></div>
-            <div class="hero-actions fade-in fade-in-delay-4">
-              <a href="articles.html" class="btn btn-primary">查看全部文章</a>
-              <a href="about.html" class="btn btn-outline">个人简介</a>
-            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Stats Section -->
-    <div class="stats">
-      <div class="stats-grid">
-        <div class="stat-item fade-in">
-          <div class="stat-number" id="stat-papers">—</div>
-          <div class="stat-label">论文总数</div>
-        </div>
-        <div class="stat-item fade-in fade-in-delay-1">
-          <div class="stat-number" id="stat-citations">—</div>
-          <div class="stat-label">引用次数</div>
-        </div>
-        <div class="stat-item fade-in fade-in-delay-2">
-          <div class="stat-number" id="stat-hindex">—</div>
-          <div class="stat-label">H-index</div>
-        </div>
-        <div class="stat-item fade-in fade-in-delay-3">
-          <div class="stat-number" id="stat-since">—</div>
-          <div class="stat-label">研究起始</div>
-        </div>
-      </div>
-    </div>
-
     <!-- Featured Articles -->
     <section class="section">
       <div class="container">
-        <div class="section-header fade-in">
-          <span class="section-tag">精选论文</span>
-          <h2 class="section-title">最新发表</h2>
-          <p class="section-subtitle">近期在顶级国际会议和期刊上发表的研究成果</p>
+        <!-- Page Header -->
+        <div class="page-header">
+          <span class="section-tag">个人简介</span>
+          <h1 class="section-title">关于我</h1>
         </div>
-        <div class="articles-grid" id="featured-articles">
+
+        <!-- Bio -->
+        <div class="about-layout">
+          <div>
+            <h2 class="about-section-title">个人简介</h2>
+            <p class="about-bio" id="about-bio">
+              <span class="skeleton" style="display:inline-block;width:100%;height:16px;margin-bottom:8px;"></span>
+              <span class="skeleton" style="display:inline-block;width:95%;height:16px;margin-bottom:8px;"></span>
+              <span class="skeleton" style="display:inline-block;width:88%;height:16px;margin-bottom:8px;"></span>
+              <span class="skeleton" style="display:inline-block;width:92%;height:16px;margin-bottom:8px;"></span>
+              <span class="skeleton" style="display:inline-block;width:70%;height:16px;"></span>
+            </p>
+          </div>
+
+          <div>
+            <h2 class="about-section-title">教育经历</h2>
+            <div class="timeline" id="education-timeline">
+              <div class="skeleton" style="height:60px;margin-bottom:16px;"></div>
+              <div class="skeleton" style="height:60px;margin-bottom:16px;"></div>
+              <div class="skeleton" style="height:60px;"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experience -->
+        <div class="about-layout" style="margin-bottom:0;">
+          <div>
+            <h2 class="about-section-title">工作经历</h2>
+            <div class="timeline" id="experience-timeline">
+              <div class="skeleton" style="height:60px;margin-bottom:16px;"></div>
+              <div class="skeleton" style="height:60px;margin-bottom:16px;"></div>
+              <div class="skeleton" style="height:60px;"></div>
+            </div>
+          </div>
+
+          <div>
+            <h2 class="about-section-title">联系方式</h2>
+            <div class="contact-info">
+              <div class="contact-item">
+                <div class="contact-item-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+                  </svg>
+                </div>
+                <div>
+                  <div class="contact-item-label">邮箱</div>
+                  <div class="contact-item-value" id="contact-email"></div>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-item-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                  </svg>
+                </div>
+                <div>
+                  <div class="contact-item-label">办公地址</div>
+                  <div class="contact-item-value" id="contact-office"></div>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-item-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418" />
+                  </svg>
+                </div>
+                <div>
+                  <div class="contact-item-label">学术主页</div>
+                  <div class="contact-item-value" id="contact-scholar"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Research Projects -->
+        <div class="section" style="padding-top:0;">
+          <h2 class="about-section-title">科研项目</h2>
+          <div class="projects-list" id="projects-list">
+            <div class="skeleton" style="height:80px;margin-bottom:12px;"></div>
+            <div class="skeleton" style="height:80px;margin-bottom:12px;"></div>
+            <div class="skeleton" style="height:80px;margin-bottom:12px;"></div>
+            <div class="skeleton" style="height:80px;"></div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <!-- Page Header -->
+        <div class="page-header">
+          <span class="section-tag">出版物</span>
+          <h1 class="section-title">全部文章</h1>
+          <p class="section-subtitle">按年份浏览所有学术论文</p>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="articles-controls" id="filter-controls"></div>
+
+        <!-- Articles List -->
+        <div id="articles-list">
+          <div class="skeleton" style="height:200px;margin-bottom:16px;"></div>
           <div class="skeleton" style="height:200px;margin-bottom:16px;"></div>
           <div class="skeleton" style="height:200px;margin-bottom:16px;"></div>
           <div class="skeleton" style="height:200px;"></div>
