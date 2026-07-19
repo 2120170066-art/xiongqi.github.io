@@ -163,10 +163,10 @@ function initArticles(data) {
       html += `<button class="filter-btn" data-filter="${y}">${y}</button>`;
     });
     // Add tag filters
-    allTags.forEach(t => {
-      html += `<button class="filter-btn" data-filter="${escapeHtml(t)}">${escapeHtml(t)}</button>`;
-    });
-    filterContainer.innerHTML = html;
+    // allTags.forEach(t => {
+    //   html += `<button class="filter-btn" data-filter="${escapeHtml(t)}">${escapeHtml(t)}</button>`;
+    // });
+    // filterContainer.innerHTML = html;
 
     // Filter handler
     filterContainer.addEventListener('click', e => {
