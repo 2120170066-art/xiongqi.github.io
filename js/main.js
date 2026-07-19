@@ -84,15 +84,13 @@ function renderMeta(article) {
 
 function renderArticleCard(article) {
   return `
-    <div class="article-card fade-in" onclick="window.location.href='article.html?id=${encodeURIComponent(article.id)}'">
+    <div class="article-card fade-in">
       <div class="article-card-meta">${renderMeta(article)}</div>
       <div class="article-card-tags">${renderTags(article.tags)}</div>
       <h3 class="article-card-title">${escapeHtml(article.title)}</h3>
       <div class="article-card-authors">${escapeHtml(article.authors)}</div>
-      <p class="article-card-abstract">${escapeHtml(article.abstract)}</p>
       <div class="article-card-footer">
-        <a class="article-card-doi" href="${escapeHtml(article.url)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">${escapeHtml(article.doi)}</a>
-        <span class="article-card-link">阅读全文 →</span>
+        <a class="article-card-doi" href="${escapeHtml(article.url)}" target="_blank" rel="noopener">${escapeHtml(article.doi)}</a>
       </div>
     </div>
   `;
