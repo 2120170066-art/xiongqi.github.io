@@ -416,9 +416,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const page = document.body.dataset.page;
   switch (page) {
-    case 'home': initHome(); break;
-    case 'articles': initArticles(); break;
+    case 'home':
+      initHome();
+      initAbout();
+      initArticles();
+      break;
     case 'article': initArticleDetail(); break;
-    case 'about': initAbout(); break;
   }
 });
