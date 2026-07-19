@@ -146,35 +146,29 @@ function initHome(data) {
 
 // ===== Articles Page =====
 let currentFilter = 'all';
+let currentPage = 1;
+const pageSize = 10;
 
 function initArticles(data) {
   const { articles } = data;
 
-  // Collect all tags
-  const allTags = [...new Set(articles.flatMap(a => a.tags))];
-
-  // Render filter buttons
+  // Render filter buttons (years only)
   const filterContainer = document.getElementById('filter-controls');
   if (filterContainer) {
     let html = '<button class="filter-btn active" data-filter="all">全部</button>';
-    // Group tags by year
     const years = [...new Set(articles.map(a => a.date.slice(0, 4)))].sort().reverse();
     years.forEach(y => {
       html += `<button class="filter-btn" data-filter="${y}">${y}</button>`;
     });
-    // Add tag filters
-    // allTags.forEach(t => {
-    //   html += `<button class="filter-btn" data-filter="${escapeHtml(t)}">${escapeHtml(t)}</button>`;
-    // });
-    // filterContainer.innerHTML = html;
+    filterContainer.innerHTML = html;
 
-    // Filter handler
     filterContainer.addEventListener('click', e => {
       const btn = e.target.closest('.filter-btn');
       if (!btn) return;
       filterContainer.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
       currentFilter = btn.dataset.filter;
+      currentPage = 1;
       renderArticleList(articles);
     });
   }
@@ -186,13 +180,10 @@ function renderArticleList(articles) {
   const container = document.getElementById('articles-list');
   if (!container) return;
 
+  // Filter
   let filtered = articles;
   if (currentFilter !== 'all') {
-    if (/^\d{4}$/.test(currentFilter)) {
-      filtered = articles.filter(a => a.date.startsWith(currentFilter));
-    } else {
-      filtered = articles.filter(a => a.tags.includes(currentFilter));
-    }
+    filtered = articles.filter(a => a.date.startsWith(currentFilter));
   }
 
   if (filtered.length === 0) {
@@ -200,9 +191,14 @@ function renderArticleList(articles) {
     return;
   }
 
-  // Group by year
+  // Paginate
+  const totalPages = Math.ceil(filtered.length / pageSize);
+  const start = (currentPage - 1) * pageSize;
+  const pageItems = filtered.slice(start, start + pageSize);
+
+  // Group page items by year
   const grouped = {};
-  filtered.forEach(a => {
+  pageItems.forEach(a => {
     const year = a.date.slice(0, 4);
     if (!grouped[year]) grouped[year] = [];
     grouped[year].push(a);
@@ -211,14 +207,40 @@ function renderArticleList(articles) {
   const years = Object.keys(grouped).sort().reverse();
   let html = '';
   years.forEach(year => {
-    html += `<div class="section" style="padding-top:0;padding-bottom:40px;"><div class="section-header" style="margin-bottom:24px;">`;
-    html += `<h2 class="section-title" style="font-size:1.5rem;" id="year-${year}">${year}</h2></div>`;
+    html += `<div class="section" style="padding-top:0;padding-bottom:24px;"><div class="section-header" style="margin-bottom:16px;">`;
+    html += `<h2 class="section-title" style="font-size:1.2rem;" id="year-${year}">${year}</h2></div>`;
     html += `<div class="articles-grid">`;
     grouped[year].forEach(a => { html += renderArticleCard(a); });
     html += `</div></div>`;
   });
 
+  // Pagination
+  if (totalPages > 1) {
+    html += '<div class="pagination">';
+    // Prev
+    html += `<button class="pagination-btn" data-page="prev" ${currentPage <= 1 ? 'disabled' : ''}>‹</button>`;
+    // Page numbers
+    for (let i = 1; i <= totalPages; i++) {
+      html += `<button class="pagination-btn ${i === currentPage ? 'active' : ''}" data-page="${i}">${i}</button>`;
+    }
+    // Next
+    html += `<button class="pagination-btn" data-page="next" ${currentPage >= totalPages ? 'disabled' : ''}>›</button>`;
+    html += '</div>';
+  }
+
   container.innerHTML = html;
+
+  // Pagination handlers
+  container.querySelectorAll('.pagination-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const target = btn.dataset.page;
+      if (target === 'prev' && currentPage > 1) currentPage--;
+      else if (target === 'next' && currentPage < totalPages) currentPage++;
+      else if (target !== 'prev' && target !== 'next') currentPage = parseInt(target);
+      else return;
+      renderArticleList(articles);
+    });
+  });
 }
 
 // ===== Article Detail Page =====
