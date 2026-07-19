@@ -122,15 +122,18 @@ async function initHome() {
     heroInterests.innerHTML = profile.researchInterests.map(i => `<span>${escapeHtml(i)}</span>`).join('');
   }
 
-  // Stats
+  // Stats (hide if zero)
+  const statsSection = document.querySelector('.stats');
   const statPapers = document.getElementById('stat-papers');
   const statCitations = document.getElementById('stat-citations');
   const statHIndex = document.getElementById('stat-hindex');
   const statSince = document.getElementById('stat-since');
 
-  if (statPapers) statPapers.textContent = profile.stats.papers;
-  if (statCitations) statCitations.textContent = (profile.stats.citations / 1000).toFixed(1) + 'k';
-  if (statHIndex) statHIndex.textContent = profile.stats.hIndex;
+  const hasStats = profile.stats.papers > 0 || profile.stats.citations > 0 || profile.stats.hIndex > 0;
+  if (statsSection) statsSection.style.display = hasStats ? 'block' : 'none';
+  if (statPapers) statPapers.textContent = profile.stats.papers || '—';
+  if (statCitations) statCitations.textContent = profile.stats.citations ? (profile.stats.citations / 1000).toFixed(1) + 'k' : '—';
+  if (statHIndex) statHIndex.textContent = profile.stats.hIndex || '—';
   if (statSince) statSince.textContent = 'Since ' + profile.stats.since;
 
   // Featured articles
@@ -372,6 +375,27 @@ async function initAbout() {
   if (contactEmail) contactEmail.innerHTML = `<a href="mailto:${escapeHtml(profile.email)}">${escapeHtml(profile.email)}</a>`;
   if (contactOffice) contactOffice.textContent = profile.office;
   if (contactScholar) contactScholar.innerHTML = `<a href="${escapeHtml(profile.googleScholar)}" target="_blank" rel="noopener">Google Scholar</a>`;
+
+  // Projects
+  const projectsList = document.getElementById('projects-list');
+  if (projectsList && profile.projects) {
+    projectsList.innerHTML = profile.projects.map(p => {
+      const isHost = p.type === '主持';
+      return `
+        <div class="project-card fade-in">
+          <div class="project-card-header">
+            <span class="project-type ${isHost ? '' : 'participate'}">${escapeHtml(p.type)}</span>
+            <span class="project-status ${p.status === '结题' ? 'closed' : ''}">${escapeHtml(p.status)}</span>
+          </div>
+          <div class="project-name">${escapeHtml(p.name)}</div>
+          <div class="project-meta">
+            <span class="project-meta-item">${escapeHtml(p.period)}</span>
+            <span class="project-meta-item">${escapeHtml(p.amount)}</span>
+          </div>
+        </div>
+      `;
+    }).join('');
+  }
 }
 
 // ===== Error Display =====
