@@ -2,6 +2,7 @@
 let siteData = null;
 
 async function loadData() {
+  if (siteData) return siteData;
   try {
     const response = await fetch('data/articles.json');
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
@@ -97,10 +98,7 @@ function renderArticleCard(article) {
 }
 
 // ===== Homepage =====
-async function initHome() {
-  const data = await loadData();
-  if (!data) return;
-
+function initHome(data) {
   const { profile, articles } = data;
 
   // Hero
@@ -149,10 +147,7 @@ async function initHome() {
 // ===== Articles Page =====
 let currentFilter = 'all';
 
-async function initArticles() {
-  const data = await loadData();
-  if (!data) return;
-
+function initArticles(data) {
   const { articles } = data;
 
   // Collect all tags
@@ -331,10 +326,7 @@ function renderMarkdown(text) {
 }
 
 // ===== About Page =====
-async function initAbout() {
-  const data = await loadData();
-  if (!data) return;
-
+function initAbout(data) {
   const { profile } = data;
 
   // Bio
@@ -411,16 +403,17 @@ function showError(message) {
 }
 
 // ===== Init =====
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
   initNav();
 
   const page = document.body.dataset.page;
-  switch (page) {
-    case 'home':
-      initHome();
-      initAbout();
-      initArticles();
-      break;
-    case 'article': initArticleDetail(); break;
+  if (page === 'home') {
+    const data = await loadData();
+    if (!data) return;
+    initHome(data);
+    initAbout(data);
+    initArticles(data);
+  } else if (page === 'article') {
+    initArticleDetail();
   }
 });
