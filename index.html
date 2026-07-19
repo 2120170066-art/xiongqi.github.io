@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>张明远 - 北京大学 | 学术主页</title>
+  <meta name="description" content="张明远，北京大学计算机科学与技术学院讲席教授，研究领域包括人工智能、自然语言处理、大语言模型等。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="home">
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">M.<span>Z</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="articles.html">文章</a></li>
+        <li><a href="about.html">关于</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="切换导航菜单">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-avatar fade-in" id="hero-avatar">
+            <div class="skeleton" style="width:120px;height:120px;border-radius:50%;"></div>
+          </div>
+          <div class="hero-text">
+            <h1 class="hero-name fade-in fade-in-delay-1" id="hero-name"></h1>
+            <p class="hero-name-en fade-in fade-in-delay-1" id="hero-name-en"></p>
+            <p class="hero-title fade-in fade-in-delay-2" id="hero-title"></p>
+            <p class="hero-affiliation fade-in fade-in-delay-2" id="hero-affiliation"></p>
+            <div class="hero-interests fade-in fade-in-delay-3" id="hero-interests"></div>
+            <div class="hero-actions fade-in fade-in-delay-4">
+              <a href="articles.html" class="btn btn-primary">查看全部文章</a>
+              <a href="about.html" class="btn btn-outline">个人简介</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <div class="stats">
+      <div class="stats-grid">
+        <div class="stat-item fade-in">
+          <div class="stat-number" id="stat-papers">—</div>
+          <div class="stat-label">论文总数</div>
+        </div>
+        <div class="stat-item fade-in fade-in-delay-1">
+          <div class="stat-number" id="stat-citations">—</div>
+          <div class="stat-label">引用次数</div>
+        </div>
+        <div class="stat-item fade-in fade-in-delay-2">
+          <div class="stat-number" id="stat-hindex">—</div>
+          <div class="stat-label">H-index</div>
+        </div>
+        <div class="stat-item fade-in fade-in-delay-3">
+          <div class="stat-number" id="stat-since">—</div>
+          <div class="stat-label">研究起始</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Featured Articles -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header fade-in">
+          <span class="section-tag">精选论文</span>
+          <h2 class="section-title">最新发表</h2>
+          <p class="section-subtitle">近期在顶级国际会议和期刊上发表的研究成果</p>
+        </div>
+        <div class="articles-grid" id="featured-articles">
+          <div class="skeleton" style="height:200px;margin-bottom:16px;"></div>
+          <div class="skeleton" style="height:200px;margin-bottom:16px;"></div>
+          <div class="skeleton" style="height:200px;"></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <p class="footer-text">&copy; 2025 张明远 · 以 <a href="https://www.pku.edu.cn" target="_blank" rel="noopener">北京大学</a> 名义发布</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

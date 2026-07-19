@@ -1,0 +1,136 @@
+{
+  "profile": {
+    "name": "张明远",
+    "nameEn": "Mingyuan Zhang",
+    "title": "讲席教授 · 博士生导师",
+    "affiliation": "北京大学 计算机科学与技术学院",
+    "email": "myzhang@pku.edu.cn",
+    "office": "北京大学理科一号楼 1608室",
+    "googleScholar": "https://scholar.google.com/citations?user=xxxxx",
+    "researchInterests": ["人工智能", "自然语言处理", "大语言模型", "知识图谱"],
+    "bio": "张明远，北京大学计算机科学与技术学院讲席教授，国家杰出青年科学基金获得者。主要从事人工智能、自然语言处理、大语言模型等方向的研究。在 ACL、EMNLP、NeurIPS、ICML 等国际顶级会议和期刊上发表论文 150 余篇，引用超过 18000 次，H-index 为 62。担任 ACL 2024 程序委员会主席，TACL 副主编。曾获中国人工智能学会自然科学一等奖、教育部自然科学二等奖等荣誉。",
+    "avatar": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Crect width='120' height='120' fill='%231a2a4a'/%3E%3Ctext x='60' y='68' text-anchor='middle' font-family='Georgia, serif' font-size='48' fill='%23c9a84c'%3EZ%3C/text%3E%3C/svg%3E",
+    "stats": {
+      "papers": 152,
+      "citations": 18200,
+      "hIndex": 62,
+      "since": "2008"
+    },
+    "education": [
+      { "period": "2004 – 2008", "school": "斯坦福大学", "degree": "计算机科学 博士" },
+      { "period": "2002 – 2004", "school": "清华大学", "degree": "计算机科学 硕士" },
+      { "period": "1998 – 2002", "school": "清华大学", "degree": "计算机科学 学士" }
+    ],
+    "experience": [
+      { "period": "2018 – 至今", "position": "讲席教授", "organization": "北京大学" },
+      { "period": "2012 – 2018", "position": "副教授", "organization": "北京大学" },
+      { "period": "2008 – 2012", "position": "助理教授", "organization": "北京大学" }
+    ]
+  },
+  "articles": [
+    {
+      "id": "2025-003",
+      "title": "Large Language Models as Zero-Shot Dialogue State Trackers through In-Context Learning",
+      "authors": "Mingyuan Zhang, Hao Chen, Yuxiang Wang, Jing Li",
+      "abstract": "We present a novel approach to zero-shot dialogue state tracking using large language models with in-context learning. Our method achieves state-of-the-art performance on MultiWOZ 2.4 without any task-specific training data, demonstrating the strong generalization capabilities of LLMs in task-oriented dialogue systems.",
+      "content": "## Introduction\n\nDialogue state tracking (DST) is a crucial component of task-oriented dialogue systems, responsible for maintaining a structured representation of user goals throughout a conversation. Traditional approaches to DST require large amounts of annotated task-specific data, which limits their scalability and real-world applicability.\n\n## Method\n\nWe propose a zero-shot DST framework that leverages the in-context learning capabilities of large language models. Our approach formulates DST as a natural language generation task, where the model generates structured dialogue state representations based on the dialogue history and a few demonstration examples provided in the prompt.\n\n### Key Contributions\n1. A novel prompt design that effectively captures the structure of dialogue states\n2. Demonstration selection strategy based on semantic similarity\n3. Comprehensive evaluation on MultiWOZ 2.4 benchmark\n\n## Results\n\nOur method achieves 56.8% joint goal accuracy on MultiWOZ 2.4 in the zero-shot setting, outperforming previous zero-shot approaches by 12.3% and approaching the performance of fully-supervised methods.",
+      "date": "2025-06-15",
+      "journal": "ACL 2025",
+      "doi": "10.18653/v1/2025.acl-long.123",
+      "tags": ["大语言模型", "对话系统", "零样本学习"],
+      "url": "https://doi.org/10.18653/v1/2025.acl-long.123",
+      "featured": true
+    },
+    {
+      "id": "2025-002",
+      "title": "Efficient Knowledge Graph Reasoning with Graph Neural Networks and Contrastive Learning",
+      "authors": "Mingyuan Zhang, Wei Li, Shuai Wang",
+      "abstract": "We propose a novel framework that combines graph neural networks with contrastive learning for efficient knowledge graph reasoning. Our approach learns robust entity and relation representations by maximizing mutual information between local and global graph structures, achieving significant improvements on multiple benchmark datasets.",
+      "content": "## Introduction\n\nKnowledge graph reasoning aims to infer missing links in knowledge graphs, which is fundamental for many AI applications. Graph neural networks have shown promise in this task, but existing methods often suffer from over-smoothing and fail to capture long-range dependencies.\n\n## Method\n\nWe introduce a contrastive learning framework for knowledge graph reasoning that:\n1. Encodes graph structure using a multi-layer GNN with residual connections\n2. Applies contrastive loss between local neighborhood views and global graph views\n3. Employs an efficient negative sampling strategy for large-scale graphs\n\n## Experimental Results\n\n| Dataset | MRR | Hit@1 | Hit@3 | Hit@10 |\n|---------|-----|-------|-------|-------|\n| FB15k-237 | 0.345 | 0.251 | 0.382 | 0.524 |\n| WN18RR | 0.498 | 0.452 | 0.512 | 0.572 |\n| YAGO3-10 | 0.527 | 0.468 | 0.545 | 0.613 |",
+      "date": "2025-03-20",
+      "journal": "NeurIPS 2025",
+      "doi": "10.xxxx/neurips2025.456",
+      "tags": ["知识图谱", "图神经网络", "对比学习"],
+      "url": "https://doi.org/10.xxxx/neurips2025.456",
+      "featured": true
+    },
+    {
+      "id": "2024-008",
+      "title": "Towards Robust Neural Machine Translation with Adversarial Data Augmentation",
+      "authors": "Mingyuan Zhang, Lei Wang, Feng Huang",
+      "abstract": "We present a novel adversarial data augmentation method for neural machine translation that generates challenging synthetic examples to improve model robustness. Our approach leverages a lightweight perturbation model to create diverse and semantically-preserving adversarial examples, leading to significant improvements in translation quality under domain shift.",
+      "content": "## Introduction\n\nNeural machine translation (NMT) models are known to be vulnerable to distributional shifts between training and test domains. This paper addresses this challenge through adversarial data augmentation.\n\n## Approach\n\nOur method consists of three components:\n1. A perturbation model that generates adversarial examples by replacing words with contextually-similar alternatives\n2. A discriminator that identifies challenging examples for the current model\n3. A training procedure that iteratively augments the training data with adversarial examples\n\n## Results\n\nExperimental results on WMT14 English-German and WMT17 Chinese-English benchmarks show that our method achieves BLEU score improvements of 1.8 and 2.3 points respectively under domain shift scenarios.",
+      "date": "2024-12-10",
+      "journal": "EMNLP 2024",
+      "doi": "10.18653/v1/2024.emnlp-main.789",
+      "tags": ["机器翻译", "对抗学习", "数据增强"],
+      "url": "https://doi.org/10.18653/v1/2024.emnlp-main.789",
+      "featured": true
+    },
+    {
+      "id": "2024-005",
+      "title": "Multimodal Foundation Models: A Comprehensive Survey",
+      "authors": "Mingyuan Zhang, Jing Li, Yuxiang Wang, Hao Chen",
+      "abstract": "This survey provides a comprehensive overview of multimodal foundation models, covering vision-language models, audio-language models, and unified multimodal architectures. We systematically analyze the key components including model architectures, training objectives, and pre-training data, and discuss open challenges and future directions.",
+      "content": "## Introduction\n\nFoundation models have revolutionized artificial intelligence by providing general-purpose representations that can be adapted to a wide range of downstream tasks. Multimodal foundation models extend this paradigm to handle multiple modalities simultaneously.\n\n## Taxonomy\n\nWe categorize multimodal foundation models into three categories:\n1. Vision-Language Models (e.g., CLIP, Flamingo, BLIP-2)\n2. Audio-Language Models (e.g., Whisper, AudioLM)\n3. Unified Multimodal Models (e.g., GPT-4V, Gemini)\n\n## Key Findings\n\n- Scaling model size and data diversity consistently improves multimodal understanding\n- Contrastive learning remains the most effective pre-training objective for cross-modal alignment\n- The choice of fusion strategy significantly impacts downstream task performance",
+      "date": "2024-08-05",
+      "journal": "IEEE TPAMI",
+      "doi": "10.1109/TPAMI.2024.3456789",
+      "tags": ["多模态学习", "基础模型", "综述"],
+      "url": "https://doi.org/10.1109/TPAMI.2024.3456789",
+      "featured": false
+    },
+    {
+      "id": "2024-002",
+      "title": "Prompt Learning with Iterative Refinement for Few-Shot Text Classification",
+      "authors": "Mingyuan Zhang, Wei Li",
+      "abstract": "We propose an iterative prompt refinement framework for few-shot text classification. Unlike existing methods that use fixed prompts, our approach dynamically refines prompt templates based on model predictions and confidence scores, leading to more accurate and stable classification performance.",
+      "content": "## Introduction\n\nPrompt-based learning has emerged as an effective paradigm for few-shot text classification. However, the performance of prompt-based methods heavily depends on the quality of prompt templates, which are often manually designed or suboptimally generated.\n\n## Method\n\nOur iterative refinement framework:\n1. Initializes prompt templates using label descriptions\n2. Evaluates prompt quality on a small validation set\n3. Refines prompts based on prediction patterns and confidence\n4. Repeats until convergence\n\n## Results\n\nOn five few-shot text classification benchmarks, our method achieves 3.5% average improvement over the best baseline methods, with particularly strong performance on fine-grained classification tasks.",
+      "date": "2024-04-12",
+      "journal": "AAAI 2024",
+      "doi": "10.1609/aaai.v38i4.28345",
+      "tags": ["提示学习", "小样本学习", "文本分类"],
+      "url": "https://doi.org/10.1609/aaai.v38i4.28345",
+      "featured": false
+    },
+    {
+      "id": "2023-006",
+      "title": "Graph-Enhanced Cross-Domain Sentiment Analysis with Dual-Attention Networks",
+      "authors": "Mingyuan Zhang, Feng Huang, Shuai Wang",
+      "abstract": "We propose a dual-attention network enhanced by graph-structured knowledge for cross-domain sentiment analysis. Our model leverages external knowledge graphs to bridge domain gaps and employs dual-attention mechanisms to capture both domain-specific and domain-invariant features.",
+      "content": "## Introduction\n\nCross-domain sentiment analysis aims to transfer sentiment knowledge from a labeled source domain to an unlabeled target domain. The key challenge is bridging the domain gap while preserving sentiment-relevant features.\n\n## Method\n\nOur approach consists of:\n1. A knowledge graph encoding module that incorporates external sentiment knowledge\n2. A dual-attention network with domain-shared and domain-specific attention heads\n3. An adversarial training component for domain-invariant feature learning\n\n## Results\n\nExperiments on five domain pairs show average accuracy improvements of 4.2% over state-of-the-art methods, demonstrating the effectiveness of incorporating external knowledge for cross-domain transfer.",
+      "date": "2023-09-18",
+      "journal": "ACL 2023",
+      "doi": "10.18653/v1/2023.acl-long.456",
+      "tags": ["情感分析", "跨域迁移", "图神经网络"],
+      "url": "https://doi.org/10.18653/v1/2023.acl-long.456",
+      "featured": false
+    },
+    {
+      "id": "2023-003",
+      "title": "Understanding the Emergent Abilities of Large Language Models through Skill Composition",
+      "authors": "Mingyuan Zhang, Hao Chen",
+      "abstract": "This paper investigates the emergent abilities of large language models through the lens of skill composition. We propose a theoretical framework that explains how the combination of basic linguistic skills during pre-training leads to emergent reasoning capabilities, and validate our theory through controlled experiments on models of varying sizes.",
+      "content": "## Introduction\n\nLarge language models exhibit emergent abilities that are not explicitly trained for, such as arithmetic reasoning, code generation, and common-sense reasoning. Understanding the mechanisms behind these emergent abilities is crucial for developing more capable and controllable AI systems.\n\n## Theoretical Framework\n\nWe propose that emergent abilities arise from the composition of basic skills acquired during pre-training:\n1. Pattern recognition skills (e.g., syntactic patterns, factual associations)\n2. Procedural skills (e.g., next-token prediction, attention patterns)\n3. Meta-learning skills (e.g., in-context learning, task adaptation)\n\n## Empirical Validation\n\nThrough controlled experiments on models ranging from 125M to 175B parameters, we show that:\n- Skill composition explains the sudden emergence of reasoning abilities at specific model scales\n- The composition of skills follows a predictable scaling law\n- Skill disentanglement enables better model interpretability",
+      "date": "2023-05-20",
+      "journal": "ICML 2023",
+      "doi": "10.xxxx/icml2023.789",
+      "tags": ["大语言模型", "涌现能力", "技能组合"],
+      "url": "https://doi.org/10.xxxx/icml2023.789",
+      "featured": false
+    },
+    {
+      "id": "2022-004",
+      "title": "A Neural-Symbolic Approach for Interpretable Question Answering over Knowledge Graphs",
+      "authors": "Mingyuan Zhang, Yuxiang Wang, Jing Li",
+      "abstract": "We present a neural-symbolic framework for interpretable question answering over knowledge graphs. Our approach combines neural semantic parsing with symbolic execution, providing natural language explanations for each reasoning step while maintaining high accuracy on complex multi-hop questions.",
+      "content": "## Introduction\n\nQuestion answering over knowledge graphs (KGQA) requires both semantic understanding of natural language questions and precise reasoning over structured knowledge. Existing neural approaches lack interpretability, while symbolic methods struggle with language variability.\n\n## Approach\n\nOur neural-symbolic framework:\n1. Uses a neural parser to convert natural language questions into logical forms\n2. Executes logical forms symbolically over the knowledge graph\n3. Generates explicit reasoning traces as natural language explanations\n\n## Results\n\nOn WebQuestionsSP and ComplexWebQuestions, our method achieves competitive accuracy while providing fully interpretable reasoning paths, with 92% of generated explanations rated as faithful by human evaluators.",
+      "date": "2022-11-08",
+      "journal": "EMNLP 2022",
+      "doi": "10.18653/v1/2022.emnlp-main.234",
+      "tags": ["知识图谱问答", "神经符号方法", "可解释性"],
+      "url": "https://doi.org/10.18653/v1/2022.emnlp-main.234",
+      "featured": false
+    }
+  ]
+}
