@@ -1,14 +1,14 @@
 {
   "profile": {
-    "name": "熊棋",
-    "nameEn": "Qi Xiong",
-    "title": "讲师 · 硕士生导师",
-    "affiliation": "西南交通大学 数学学院",
+    "name": "Qi Xiong",
+    "nameEn": "熊棋",
+    "title": "Lecturer · Master Supervisor",
+    "affiliation": "School of Mathematics, Southwest Jiaotong University",
     "email": "xq@swjtu.edu.cn",
-    "office": "西南交通大学数学学院",
+    "office": "School of Mathematics, Southwest Jiaotong University",
     "googleScholar": "https://scholar.google.com/citations?user=xxxxx",
-    "researchInterests": ["位势理论", "非线性方程", "调和分析", "Riesz与Wolff位势"],
-    "bio": "熊棋，西南交通大学数学学院讲师。2023年6月于南开大学获得应用数学博士学位。主要从事位势理论、非线性方程等方向的研究。主持国家自然科学基金青年科学基金项目（C类）1项、四川省自然科学基金青年基金项目1项，参与国家自然科学基金面上项目2项。",
+    "researchInterests": ["Potential Theory", "Nonlinear Elliptic Equations", "Harmonic Analysis", "Riesz & Wolff Potentials"],
+    "bio": "Qi Xiong is a Lecturer at the School of Mathematics, Southwest Jiaotong University. He received his Ph.D. in Applied Mathematics from Nankai University in 2023. His research interests include potential theory, nonlinear elliptic equations, and harmonic analysis. He is the principal investigator of a NSFC Young Scientists Fund project and a Sichuan Natural Science Foundation project.",
     "avatar": "data/header.png",
     "stats": {
       "papers": 13,
@@ -17,40 +17,40 @@
       "since": "2019"
     },
     "education": [
-      { "period": "2017 – 2023", "school": "南开大学", "degree": "应用数学 博士" },
-      { "period": "2013 – 2017", "school": "湖南师范大学", "degree": "数学与应用数学 学士" }
+      { "period": "2017 – 2023", "school": "Nankai University", "degree": "Ph.D. in Applied Mathematics" },
+      { "period": "2013 – 2017", "school": "Hunan Normal University", "degree": "B.S. in Mathematics and Applied Mathematics" }
     ],
     "experience": [
-      { "period": "2023 – 至今", "position": "讲师", "organization": "西南交通大学 数学学院" }
+      { "period": "2023 – Present", "position": "Lecturer", "organization": "Southwest Jiaotong University" }
     ],
     "projects": [
       {
-        "type": "主持",
-        "name": "国家自然科学基金委员会, 青年科学基金项目（C类）, 12401122, Riesz与Wolff位势有界性及其在非线性方程中的应用",
-        "period": "2025-01 至 2027-12",
-        "amount": "30万元",
-        "status": "在研"
+        "type": "PI",
+        "name": "NSFC Young Scientists Fund (C) No. 12401122: Boundedness of Riesz and Wolff potentials and their applications to nonlinear equations",
+        "period": "2025-01 – 2027-12",
+        "amount": "CNY 300,000",
+        "status": "Active"
       },
       {
-        "type": "主持",
-        "name": "四川省自然科学基金委员会, 青年基金项目, 2025ZNSFSC0799, 位势理论在局部与非局部方程中的应用",
-        "period": "2025-01 至 2026-12",
-        "amount": "10万元",
-        "status": "在研"
+        "type": "PI",
+        "name": "Sichuan Natural Science Foundation Youth Project No. 2025ZNSFSC0799: Potential theory in local and nonlocal equations",
+        "period": "2025-01 – 2026-12",
+        "amount": "CNY 100,000",
+        "status": "Active"
       },
       {
-        "type": "参与",
-        "name": "国家自然科学基金委员会, 面上项目, 12571226, 椭圆Bernoulli型自由边界奇性的研究",
-        "period": "2026-01 至 2029-12",
-        "amount": "44万元",
-        "status": "在研"
+        "type": "Co-I",
+        "name": "NSFC General Project No. 12571226: Singularities of elliptic Bernoulli-type free boundaries",
+        "period": "2026-01 – 2029-12",
+        "amount": "CNY 440,000",
+        "status": "Active"
       },
       {
-        "type": "参与",
-        "name": "国家自然科学基金委员会, 面上项目, 12071229, 与非局部方程相关的若干调和分析问题及应用",
-        "period": "2021-01 至 2024-12",
-        "amount": "52万元",
-        "status": "结题"
+        "type": "Co-I",
+        "name": "NSFC General Project No. 12071229: Harmonic analysis problems related to nonlocal equations and applications",
+        "period": "2021-01 – 2024-12",
+        "amount": "CNY 520,000",
+        "status": "Completed"
       }
     ]
   },
@@ -62,7 +62,7 @@
       "date": "2026-01-01",
       "journal": "J. Differential Equations 464",
       "doi": "10.xxxx/jde.2026.114192",
-      "tags": ["椭圆方程", "障碍问题", "Riesz位势", "Orlicz增长"],
+      "tags": ["Elliptic equations", "Obstacle problems", "Riesz potentials", "Orlicz growth"],
       "url": "#",
       "featured": true
     },
@@ -73,7 +73,7 @@
       "date": "2026-01-01",
       "journal": "J. Math. Anal. Appl. 557(1)",
       "doi": "10.xxxx/jmaa.2026.130277",
-      "tags": ["Wolff位势", "椭圆方程", "Orlicz增长"],
+      "tags": ["Wolff potentials", "Elliptic equations", "Orlicz growth"],
       "url": "#",
       "featured": true
     },
@@ -84,7 +84,7 @@
       "date": "2026-01-01",
       "journal": "J. Math. Anal. Appl. 555(1)",
       "doi": "10.xxxx/jmaa.2026.130034",
-      "tags": ["Wolff位势", "障碍问题", "椭圆方程", "Orlicz增长"],
+      "tags": ["Wolff potentials", "Obstacle problems", "Elliptic equations", "Orlicz growth"],
       "url": "#",
       "featured": true
     },
@@ -95,7 +95,7 @@
       "date": "2025-07-01",
       "journal": "J. Geom. Anal. 35(7)",
       "doi": "10.xxxx/jga.2025.191",
-      "tags": ["Riesz位势", "抛物方程", "非局部方程"],
+      "tags": ["Riesz potentials", "Parabolic equations", "Nonlocal equations"],
       "url": "#",
       "featured": false
     },
@@ -106,7 +106,7 @@
       "date": "2024-05-01",
       "journal": "J. Geom. Anal. 34(5)",
       "doi": "10.xxxx/jga.2024.124",
-      "tags": ["Lorentz-Sobolev容量", "Caffarelli-Silvestre延拓"],
+      "tags": ["Lorentz-Sobolev capacities", "Caffarelli-Silvestre extensions"],
       "url": "#",
       "featured": false
     },
@@ -117,7 +117,7 @@
       "date": "2024-01-01",
       "journal": "J. Geom. Anal. 34(1)",
       "doi": "10.xxxx/jga.2024.32",
-      "tags": ["1-Laplace方程", "图像去噪", "Dirichlet问题"],
+      "tags": ["1-Laplace equation", "Image denoising", "Dirichlet problem"],
       "url": "#",
       "featured": false
     },
@@ -128,7 +128,7 @@
       "date": "2023-01-01",
       "journal": "Acta Math. Sin. (Engl. Ser.) 39",
       "doi": "10.xxxx/ams.2023.013",
-      "tags": ["Stokes系统", "分数阶可微性", "正则性"],
+      "tags": ["Stokes system", "Fractional differentiability", "Regularity"],
       "url": "#",
       "featured": false
     },
@@ -139,7 +139,7 @@
       "date": "2023-01-01",
       "journal": "J. Differential Equations 343",
       "doi": "10.xxxx/jde.2023.007",
-      "tags": ["Besov正则性", "电流变液", "Stokes系统"],
+      "tags": ["Besov regularity", "Electrorheological fluids", "Stokes system"],
       "url": "#",
       "featured": false
     },
@@ -150,7 +150,7 @@
       "date": "2022-10-01",
       "journal": "J. Math. Anal. Appl. 515(2)",
       "doi": "10.xxxx/jmaa.2022.126448",
-      "tags": ["Riesz位势", "Orlicz增长", "椭圆方程"],
+      "tags": ["Riesz potentials", "Orlicz growth", "Elliptic equations"],
       "url": "#",
       "featured": false
     },
@@ -161,7 +161,7 @@
       "date": "2022-03-01",
       "journal": "Calc. Var. Partial Differential Equations 61(3)",
       "doi": "10.xxxx/cvpde.2022.83",
-      "tags": ["梯度位势", "障碍问题", "Orlicz增长"],
+      "tags": ["Gradient potentials", "Obstacle problems", "Orlicz growth"],
       "url": "#",
       "featured": false
     },
@@ -172,7 +172,7 @@
       "date": "2021-12-01",
       "journal": "Mediterr. J. Math. 18(6)",
       "doi": "10.xxxx/mjm.2021.257",
-      "tags": ["非局部方程", "双相方程", "最大值原理"],
+      "tags": ["Nonlocal equations", "Double phase", "Maximum principles"],
       "url": "#",
       "featured": false
     },
@@ -183,7 +183,7 @@
       "date": "2021-03-01",
       "journal": "J. Math. Anal. Appl. 495(1)",
       "doi": "10.xxxx/jmaa.2021.124698",
-      "tags": ["梯度位势", "障碍问题", "椭圆方程"],
+      "tags": ["Gradient potentials", "Obstacle problems", "Elliptic equations"],
       "url": "#",
       "featured": false
     },
@@ -194,7 +194,7 @@
       "date": "2019-04-01",
       "journal": "Anal. Appl. (Singap.) 17(4)",
       "doi": "10.xxxx/aa.2019.005",
-      "tags": ["Stokes系统", "BMO系数", "Reifenberg区域"],
+      "tags": ["Stokes system", "BMO coefficients", "Reifenberg domains"],
       "url": "#",
       "featured": false
     }

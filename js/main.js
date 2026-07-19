@@ -10,7 +10,7 @@ async function loadData() {
     return siteData;
   } catch (err) {
     console.error('Failed to load data:', err);
-    showError('数据加载失败，请确保 data/articles.json 文件存在且格式正确。');
+    showError('Failed to load data. Please ensure data/articles.json exists and is valid.');
     return null;
   }
 }
@@ -139,7 +139,7 @@ function initHome(data) {
     if (featured.length > 0) {
       featuredContainer.innerHTML = featured.map(a => renderArticleCard(a)).join('');
     } else {
-      featuredContainer.innerHTML = '<div class="empty-state">暂无精选文章</div>';
+      featuredContainer.innerHTML = '<div class="empty-state">No featured articles</div>';
     }
   }
 }
@@ -155,7 +155,7 @@ function initArticles(data) {
   // Render filter buttons (years only)
   const filterContainer = document.getElementById('filter-controls');
   if (filterContainer) {
-    let html = '<button class="filter-btn active" data-filter="all">全部</button>';
+    let html = '<button class="filter-btn active" data-filter="all">All</button>';
     const years = [...new Set(articles.map(a => a.date.slice(0, 4)))].sort().reverse();
     years.forEach(y => {
       html += `<button class="filter-btn" data-filter="${y}">${y}</button>`;
@@ -187,7 +187,7 @@ function renderArticleList(articles) {
   }
 
   if (filtered.length === 0) {
-    container.innerHTML = '<div class="empty-state">没有找到匹配的文章</div>';
+    container.innerHTML = '<div class="empty-state">No matching articles found</div>';
     return;
   }
 
@@ -252,13 +252,13 @@ async function initArticleDetail() {
   const articleId = params.get('id');
 
   if (!articleId) {
-    showError('未指定文章 ID');
+    showError('No article ID specified');
     return;
   }
 
   const article = data.articles.find(a => a.id === articleId);
   if (!article) {
-    showError('未找到该文章');
+    showError('Article not found');
     return;
   }
 
@@ -268,9 +268,9 @@ async function initArticleDetail() {
   const breadcrumb = document.getElementById('detail-breadcrumb');
   if (breadcrumb) {
     breadcrumb.innerHTML = `
-      <a href="index.html">首页</a>
+      <a href="index.html">Home</a>
       <span>›</span>
-      <a href="articles.html">文章</a>
+      <a href="index.html#articles">Publications</a>
       <span>›</span>
       <span>${escapeHtml(article.title.slice(0, 40))}...</span>
     `;
@@ -392,12 +392,12 @@ function initAbout(data) {
   const projectsList = document.getElementById('projects-list');
   if (projectsList && profile.projects) {
     projectsList.innerHTML = profile.projects.map(p => {
-      const isHost = p.type === '主持';
+      const isHost = p.type === 'PI';
       return `
         <div class="project-card fade-in">
           <div class="project-card-header">
             <span class="project-type ${isHost ? '' : 'participate'}">${escapeHtml(p.type)}</span>
-            <span class="project-status ${p.status === '结题' ? 'closed' : ''}">${escapeHtml(p.status)}</span>
+            <span class="project-status ${p.status === 'Completed' ? 'closed' : ''}">${escapeHtml(p.status)}</span>
           </div>
           <div class="project-name">${escapeHtml(p.name)}</div>
           <div class="project-meta">
@@ -416,9 +416,9 @@ function showError(message) {
   if (main) {
     main.innerHTML = `
       <div class="error-state">
-        <h2>出错了</h2>
+        <h2>Oops!</h2>
         <p>${escapeHtml(message)}</p>
-        <a href="index.html" class="btn btn-primary">返回首页</a>
+        <a href="index.html" class="btn btn-primary">Back to Home</a>
       </div>
     `;
   }
