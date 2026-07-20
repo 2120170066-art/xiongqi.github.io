@@ -11,7 +11,7 @@
     "bio": "Qi Xiong is a Lecturer at the School of Mathematics, Southwest Jiaotong University. He received his Ph.D. in Applied Mathematics from Nankai University in 2023. His research interests include potential theory, nonlinear elliptic equations, and harmonic analysis. He is the principal investigator of a NSFC Young Scientists Fund project and a Sichuan Natural Science Foundation project.",
     "avatar": "data/header.png",
     "stats": {
-      "papers": 13,
+      "papers": 15,
       "citations": 0,
       "hIndex": 0,
       "since": "2019"
@@ -55,6 +55,28 @@
     ]
   },
   "articles": [
+    {
+      "id": "2026-005",
+      "title": "Embeddings of potentials along the moment curve",
+      "authors": "Xing Fu, Jie Xiao, Qi Xiong ✉",
+      "date": "2026-01-01",
+      "journal": "Commun. Contemp. Math.",
+      "doi": "10.1142/S0219199726500252",
+      "tags": ["Potential theory", "Moment curve", "Embeddings"],
+      "url": "https://doi.org/10.1142/S0219199726500252",
+      "featured": true
+    },
+    {
+      "id": "2026-004",
+      "title": "Hölder Continuity for Fully Fractional Parabolic Equations with Space-time Nonlocal Operators",
+      "authors": "Lingwei Ma, Qi Xiong, Zhenqiu Zhang",
+      "date": "2026-01-01",
+      "journal": "Front. Math (2026)",
+      "doi": "10.1007/s11464-025-0169-y",
+      "tags": ["Fractional parabolic equations", "Nonlocal operators", "Hölder continuity"],
+      "url": "https://doi.org/10.1007/s11464-025-0169-y",
+      "featured": true
+    },
     {
       "id": "2026-003",
       "title": "Riesz potential estimates for double obstacle problems with Orlicz growth",
