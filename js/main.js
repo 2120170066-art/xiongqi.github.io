@@ -125,9 +125,9 @@ function initHome(data) {
   const statHIndex = document.getElementById('stat-hindex');
   const statSince = document.getElementById('stat-since');
 
-  const hasStats = profile.stats.papers > 0 || profile.stats.citations > 0 || profile.stats.hIndex > 0;
+  const hasStats = articles.length > 0 || profile.stats.citations > 0 || profile.stats.hIndex > 0;
   if (statsSection) statsSection.style.display = hasStats ? 'block' : 'none';
-  if (statPapers) statPapers.textContent = profile.stats.papers || '—';
+  if (statPapers) statPapers.textContent = articles.length || '—';
   if (statCitations) statCitations.textContent = profile.stats.citations ? (profile.stats.citations / 1000).toFixed(1) + 'k' : '—';
   if (statHIndex) statHIndex.textContent = profile.stats.hIndex || '—';
   if (statSince) statSince.textContent = 'Since ' + profile.stats.since;
