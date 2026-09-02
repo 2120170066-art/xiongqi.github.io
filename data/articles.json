@@ -53,6 +53,17 @@
     ]
   },
   "articles": [
+     {
+      "id": "2026-006",
+      "title": "Universal Potential Estimates for Mixed Local and Nonlocal Nonlinear Measure Data Problems",
+      "authors": "Lingwei Ma, Qi Xiong, Zhenqiu Zhang*",
+      "date": "2026-08-01",
+      "journal": " J. Geom. Anal. 36 (2026)",
+      "doi": "10.1007/s11464-025-0169-y",
+      "tags": ["Potential Estimates", "Mixed Local and Nonlocal operators"],
+      "url": "https://doi.org/10.1007/s12220-026-02568-w",
+      "featured": true
+    },
     {
       "id": "2026-005",
       "title": "Embeddings of potentials along the moment curve",
